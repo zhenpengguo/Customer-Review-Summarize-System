@@ -1,7 +1,7 @@
 import json
 
 from utils import split_sentence, add_to_dict_list, Item, get_top_k, get_top_k_from_lsit, _contains_related_aspect
-from model_training import SentimentModel
+from model_training import SentimentModel ,FastText
 from sentence import extract_sentence_aspects
 
 
@@ -160,6 +160,8 @@ with open("./data/business_id.csv","r", encoding="utf8") as f:
 
 
 if __name__ == 'main':
+    fast = FastText()
+    fast.train()
     ids = "0-3kCit8mt8cCjiQXDyg8w" # business ID
     business = Business(ids, business_id_name_dict.get(ids))
     a = business.extract_aspects().aspect_based_summary()
