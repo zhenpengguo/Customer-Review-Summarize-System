@@ -1,19 +1,32 @@
 # CustomerReviewSummarizeSystem
 
-用户评价情感分析系统
+一个简答的用户情感分析系统 ,使用的是开源数据   [Yelp DataSet](https://www.yelp.com/dataset/documentation/main)  
+
+，对标国内的大众点评。此项目仅用到 business.json 和 review.json 两个文件，下载解压后放入到data文件中。
 
 
 
-1.项目背景
-2.项目描述
-3.系统整体架构
-4.主流程及关键点分析
-   4.1 数据读取
-   4.2 提取评价的aspects
-   4.3 提取用户评价、对用户评价进行打分及归纳
-   4.4 打印结果
-5.用户评价情感二分类模型
-6.结果展示
-    6.1 展示评价结果 
-    6.2 分类模型ROC-AUC score 
-7.总结和思考
+## Run
+
+
+
+**1、Text processing**
+
+```python
+ python data.py
+```
+
+
+
+**2、Training  model**
+
+```python
+ python main.py
+```
+
+## Test
+
+```python
+ python test.py
+```
+
