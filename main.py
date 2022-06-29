@@ -160,7 +160,7 @@ with open("./data/business_id.csv","r", encoding="utf8") as f:
 
 
 if __name__ == 'main':
-    ids = "0-3kCit8mt8cCjiQXDyg8w"
+    ids = "0-3kCit8mt8cCjiQXDyg8w" # business ID
     business = Business(ids, business_id_name_dict.get(ids))
     a = business.extract_aspects().aspect_based_summary()
     print(a)
